@@ -1,0 +1,37 @@
+hostname,ip_address,device_type,source_interface,enabled,phase
+# ============================================================================,,,,,
+# TACACS+ Deployment Inventory,,,,,
+# ============================================================================,,,,,
+# Columns:,,,,,
+#   hostname         - Device name for identification and logging,,,,,
+#   ip_address       - Management IP address,,,,,
+#   device_type      - cisco_ios (Catalyst/IE switches) or cisco_nxos (Nexus),,,,,
+#   source_interface - Source interface for TACACS traffic (IOS only, optional),,,,
+#   enabled          - true/false to include/exclude from deployment,,,,,
+#   phase            - pilot (for initial testing) or production (full rollout),,,,,
+# ============================================================================,,,,,
+,,,,,
+# PILOT DEVICES - Deploy first to validate configuration,,,,,
+switch,192.168.1.1,cisco_ios,GigabitEthernet1/2,TRUE,pilot
+IE-SW-PILOT-001,192.168.2.1,cisco_ios,GigabitEthernet0/0,TRUE,pilot
+NEXUS-PILOT-001,192.168.3.1,cisco_nxos,,TRUE,pilot
+,,,,,
+# CATALYST SWITCHES - Production,,,,,
+CAT-SW-001,192.168.1.10,cisco_ios,Vlan100,TRUE,production
+CAT-SW-002,192.168.1.11,cisco_ios,Vlan100,TRUE,production
+CAT-SW-003,192.168.1.12,cisco_ios,Vlan100,TRUE,production
+CAT-SW-004,192.168.1.13,cisco_ios,Vlan100,TRUE,production
+CAT-SW-005,192.168.1.14,cisco_ios,Vlan100,TRUE,production
+,,,,,
+# INDUSTRIAL ETHERNET SWITCHES - Production,,,,,
+IE-SW-001,192.168.2.10,cisco_ios,GigabitEthernet0/0,TRUE,production
+IE-SW-002,192.168.2.11,cisco_ios,GigabitEthernet0/0,TRUE,production
+IE-SW-003,192.168.2.12,cisco_ios,GigabitEthernet0/0,TRUE,production
+,,,,,
+# NEXUS SWITCHES - Production,,,,,
+NEXUS-001,192.168.3.10,cisco_nxos,,TRUE,production
+NEXUS-002,192.168.3.11,cisco_nxos,,TRUE,production
+NEXUS-003,192.168.3.12,cisco_nxos,,TRUE,production
+,,,,,
+# DISABLED DEVICES - Will be skipped during deployment,,,,,
+#CAT-SW-DISABLED,192.168.1.99,cisco_ios,Vlan100,FALSE,production
