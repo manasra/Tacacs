@@ -50,8 +50,8 @@ except ImportError:
 # CONSTANTS AND DEFAULTS
 # ============================================================================
 DEFAULT_INVENTORY_FILE = "inventory.csv"
-TACACS_SERVER_1 = "10.11.159.5"
-TACACS_SERVER_2 = "10.11.159.6"
+TACACS_SERVER_1 = "10.X.X.X"
+TACACS_SERVER_2 = "10.X.X.X"
 TACACS_KEY = "047A3B2B3C244F7B1B1C351601185D56796A"
 
 
