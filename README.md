@@ -260,8 +260,8 @@ Detailed logs are saved to `logs/` directory with timestamps.
 To modify TACACS settings (servers, keys, etc.), edit the constants at the top of `tacacs_deployer.py`:
 
 ```python
-TACACS_SERVER_1 = "10.11.159.5"
-TACACS_SERVER_2 = "10.11.159.6"
+TACACS_SERVER_1 = "10.11.1.5"
+TACACS_SERVER_2 = "10.11.1.6"
 TACACS_KEY = "047A3B2B3C244F7B1B1C351601185D56796A"
 ```
 
